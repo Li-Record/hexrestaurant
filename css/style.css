@@ -1,0 +1,306 @@
+/*css reset start*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    font-family: Microsoft JhengHei;
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*css reset end*/
+
+/*layout start*/
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+/*banner 背景圖*/
+.header {
+    background: url(../img/header_desktop.png);
+    background-repeat: no-repeat;
+    height: 420px;
+    position: relative;
+}
+
+/*表頭選單 + logo*/
+.header-main {
+    /*透明背景*/
+    background: rgba(0, 0, 0, 0.75);
+    height: 60px;
+    padding: 0 40px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+/*logo*/
+.header-main-logo {
+    background: url(../img/logo_w@svg.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    width: 120px;
+    height: 24px;
+    /*圖片置中*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-main-logo a {
+    /*隱藏*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 101%;
+    display: block;
+}
+
+/*選單*/
+.header-main-menu {
+    float: right;
+}
+
+.header-main-menu li {
+    float: left;
+}
+
+.header-main-menu li a {
+    color: #fff;
+    display: block;
+    padding: 0 25px;
+    line-height: 60px;
+    transition: all 0.6s;
+    font-size: 17px;
+}
+
+.header-main-menu li a:hover {
+    background: gray;
+}
+
+.header-main-humMenu {
+    display: none;
+}
+
+@media(max-width: 600px) {
+    .clickMenu .header-main {
+        background: rgba(0, 0, 0, 1);
+    }
+		/* moblie 選單*/
+    .header-main-menu {
+        z-index: 10;
+        float: none;
+        background: rgba(0, 0, 0, 1);
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 59px;
+        right: 0;
+        left: 0;
+        transition: max-height 0.3s;
+    }
+
+    .clickMenu .header-main-menu {
+        max-height: 300px;
+    }
+
+    .header-main-menu li {
+        float: none;
+    }
+
+    .header-main-menu li a {
+        color: #fff;
+        display: block;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .header-main-humMenu {
+        display: block;
+        color: #fff;
+        padding: 0 15px;
+        line-height: 60px;
+        font-size: 17px;
+        float: right;
+    }
+}
+
+@media(max-width: 415px) {}
+
+/*標語*/
+.slogan {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    /*min-width: 55%;*/
+    padding: 20px;
+    text-align: center;
+    line-height: 1.5;
+
+    /*用絕對定位置中*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slogan h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+@media(max-width: 612px) {
+    .slogan {
+        width: 55%;
+    }
+}
+
+@media(max-width: 415px) {
+    .slogan {
+        width: 85%;
+    }
+}
+
+/*layout end*/
