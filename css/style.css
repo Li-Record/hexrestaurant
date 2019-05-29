@@ -166,6 +166,12 @@ a {
     position: relative;
 }
 
+@media(max-width: 600px) {
+    .header {
+        background: url(../img/header_mobile.png);
+    }
+}
+
 /*表頭選單 + logo*/
 .header-main {
     /*透明背景*/
@@ -228,7 +234,8 @@ a {
     .clickMenu .header-main {
         background: rgba(0, 0, 0, 1);
     }
-		/* moblie 選單*/
+
+    /* moblie 選單*/
     .header-main-menu {
         z-index: 10;
         float: none;
@@ -266,8 +273,6 @@ a {
         float: right;
     }
 }
-
-@media(max-width: 415px) {}
 
 /*標語*/
 .slogan {
