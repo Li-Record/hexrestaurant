@@ -106,6 +106,7 @@ section {
 body {
     font-family: Microsoft JhengHei;
     line-height: 1;
+    color: #3D1101;
 }
 
 ol,
@@ -148,8 +149,9 @@ a {
 
 /*css reset end*/
 
-/*layout start*/
+/* layout start */
 .wrap {
+    /* 預設大小 1024px */
     max-width: 1024px;
     margin: 0 auto;
 }
@@ -158,7 +160,11 @@ a {
     clear: both;
 }
 
-/*banner 背景圖*/
+h3 {
+    font-size: 24px;
+}
+
+/* banner 背景圖 */
 .header {
     background: url(../img/header_desktop.png);
     background-repeat: no-repeat;
@@ -166,15 +172,15 @@ a {
     position: relative;
 }
 
+/*更換 mobile 圖 600px 更換因為 mobile 圖片寬度為 600*/
 @media(max-width: 600px) {
     .header {
         background: url(../img/header_mobile.png);
     }
 }
 
-/*表頭選單 + logo*/
+/* 表頭選單 + logo */
 .header-main {
-    /*透明背景*/
     background: rgba(0, 0, 0, 0.75);
     height: 60px;
     padding: 0 40px;
@@ -182,29 +188,34 @@ a {
     transition: background 0.3s;
 }
 
-/*logo*/
+/* header-main 767px 以下，padding 左右改為 1em */
+@media(max-width: 767px){
+	.header-main{
+		padding: 0 1em;
+	}
+}
+
+/* logo */
 .header-main-logo {
     background: url(../img/logo_w@svg.svg);
     background-repeat: no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
     width: 120px;
     height: 24px;
-    /*圖片置中*/
+    /* 圖片置中，相對於 header-main */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .header-main-logo a {
-    /*隱藏*/
+    /* 隱藏 h1 文字 */
     overflow: hidden;
     white-space: nowrap;
     text-indent: 101%;
     display: block;
 }
 
-/*選單*/
+/* pc 選單 */
 .header-main-menu {
     float: right;
 }
@@ -226,11 +237,15 @@ a {
     background: gray;
 }
 
+/* 隱藏 moblie 選單按鈕 */
 .header-main-humMenu {
     display: none;
 }
 
-@media(max-width: 600px) {
+/* mobile 選單 ，768px 以下改為漢堡選單 */
+@media(max-width: 768px) {
+
+    /* 配合漢堡選單變黑色 */
     .clickMenu .header-main {
         background: rgba(0, 0, 0, 1);
     }
@@ -240,6 +255,7 @@ a {
         z-index: 10;
         float: none;
         background: rgba(0, 0, 0, 1);
+        /* 預設隱藏 */
         max-height: 0;
         overflow: hidden;
         position: absolute;
@@ -249,6 +265,7 @@ a {
         transition: max-height 0.3s;
     }
 
+    /* 新增 clickMenu 作為點擊事件 */
     .clickMenu .header-main-menu {
         max-height: 300px;
     }
@@ -264,6 +281,7 @@ a {
         text-align: center;
     }
 
+    /* 漢堡選單按鈕，之後改成三條線的 */
     .header-main-humMenu {
         display: block;
         color: #fff;
@@ -278,12 +296,10 @@ a {
 .slogan {
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
-    /*min-width: 55%;*/
     padding: 20px;
     text-align: center;
     line-height: 1.5;
-
-    /*用絕對定位置中*/
+    /* 用絕對定位置中，相對於 header */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -296,15 +312,125 @@ a {
     margin-bottom: 0.5em;
 }
 
-@media(max-width: 612px) {
+/* 設定在 767px 以下時，slogan 寬度為 60% */
+@media(max-width: 767px) {
     .slogan {
-        width: 55%;
+        width: 60%;
     }
 }
 
+/* 設定在 415px 以下時，slogan 寬度為 85% */
 @media(max-width: 415px) {
     .slogan {
         width: 85%;
+    }
+}
+
+/*footer*/
+
+.footer {
+    background: rgba(239, 233, 231, 1);
+    padding: 50px 40px;
+}
+
+/* footer 767px 以下，左右 padding 改為 0 */
+@media(max-width: 767px) {
+    .footer {
+        padding: 50px 0;
+    }
+}
+
+/* 介紹 + 聯絡 */
+.footer-intro,
+.footer-contact {
+    float: left;
+    width: 30%;
+    margin-right: 10px;
+}
+
+.footer-intro h3,
+.footer-contact h3 {
+    margin-bottom: 1em
+}
+
+.footer-intro p,
+.footer-contact ul {
+    line-height: 1.5;
+}
+
+.footer-contact ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+/* 767px 以下改成單欄式排版 50% */
+@media(max-width: 767px) {
+
+    /* 介紹 + 聯絡 for 平板 */
+    .footer-intro,
+    .footer-contact {
+        float: none;
+        width: 50%;
+        margin: 0 auto 2em auto;
+    }
+}
+
+/* 550px 以下改成單欄式排版 90% */
+@media(max-width: 550px) {
+
+    /* 介紹 + 聯絡 for moblie */
+    .footer-intro,
+    .footer-contact {
+        width: 90%;
+    }
+}
+
+/* logo + link */
+.footer-item {
+    float: right;
+    width: 30%;
+}
+
+.footer-item-logo {
+    background: url(../img/logo_l@svg.svg);
+    width: 243px;
+    height: 48px;
+    margin-bottom: 2em;
+    float: right;
+}
+
+.footer-item-link {
+    float: right;
+    width: 100%; /* 為了不讓 link 和 logo 同行 */
+}
+
+.footer-item-link li {
+    float: right;
+    margin-left: 10px;
+}
+
+.footer-item-link li a img {
+    width: 38px;
+}
+
+/* 767px 以下改成單欄式排版 50% */
+@media(max-width: 767px) {
+
+    /* logo + link for 平板 */
+    .footer-item {
+        float: none;
+        width: 50%;
+        margin: 0 auto;
+    }
+	
+}
+
+/* 550px 以下改成單欄式排版 90%*/
+@media(max-width: 550px) {
+
+    /* logo + link for moblie */
+    .footer-item {
+        width: 90%;
     }
 }
 
