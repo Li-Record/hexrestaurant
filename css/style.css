@@ -164,6 +164,10 @@ h3 {
     font-size: 24px;
 }
 
+h4 {
+    font-size: 20px;
+}
+
 /* banner 背景圖 */
 .header {
     background: url(../img/header_desktop.png);
@@ -189,10 +193,10 @@ h3 {
 }
 
 /* header-main 767px 以下，padding 左右改為 1em */
-@media(max-width: 767px){
-	.header-main{
-		padding: 0 1em;
-	}
+@media(max-width: 767px) {
+    .header-main {
+        padding: 0 1em;
+    }
 }
 
 /* logo */
@@ -375,13 +379,13 @@ h3 {
     }
 }
 
-/* 550px 以下改成單欄式排版 90% */
-@media(max-width: 550px) {
+/* 415px 以下改成單欄式排版 85% */
+@media(max-width: 415px) {
 
-    /* 介紹 + 聯絡 for moblie */
+    /* 表尾介紹 + 聯絡 for moblie */
     .footer-intro,
     .footer-contact {
-        width: 90%;
+        width: 85%;
     }
 }
 
@@ -401,7 +405,8 @@ h3 {
 
 .footer-item-link {
     float: right;
-    width: 100%; /* 為了不讓 link 和 logo 同行 */
+    width: 100%;
+    /* 為了不讓 link 和 logo 同行 */
 }
 
 .footer-item-link li {
@@ -422,16 +427,118 @@ h3 {
         width: 50%;
         margin: 0 auto;
     }
-	
+
 }
 
-/* 550px 以下改成單欄式排版 90%*/
-@media(max-width: 550px) {
+/* 415px 以下改成單欄式排版 85%*/
+@media(max-width: 415px) {
 
     /* logo + link for moblie */
     .footer-item {
-        width: 90%;
+        width: 85%;
     }
 }
 
 /*layout end*/
+
+/* 
+	統一
+	1. padding 左右都是 40px 
+	2. h3 24px
+	3. h4 20px
+	3. p 16px
+*/
+
+/* main */
+.main {
+    padding: 80px 40px;
+    line-height: 1.5;
+}
+
+/* 415px 以下 main padding 左右改 0 */
+@media(max-width: 415px) {
+    .main {
+        padding: 80px 0;
+    }
+}
+
+.main-title {
+    text-align: center;
+    position: relative;
+    width: 240px;
+    margin: 0 auto;
+}
+
+/* 偽元素做出前後線 */
+.main-title::after,
+.main-title::before {
+    content: "";
+    border-top: 1.5px solid #979797;
+    width: 120px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-title::after {
+    content: "";
+    right: 255px;
+
+}
+
+.main-title::before {
+    content: "";
+    left: 255px;
+}
+
+@media(max-width: 767px) {
+
+    .main-title::after,
+    .main-title::before {
+        display: none;
+    }
+}
+
+/* feature */
+.feature {
+    margin: 2em 0px;
+}
+
+.feature li {
+    float: left;
+    width: 27.33333%;
+    margin: 0 3%;
+}
+
+.feature li img {
+    border-radius: 50%;
+    border: 0px;
+    display: block;
+    margin: 0 auto;
+}
+
+.feature li h4 {
+    text-align: center;
+    margin: 0.5em;
+}
+
+/* 平板 767px 以下*/
+@media(max-width: 767px) {
+
+    .feature li {
+        float: none;
+        width: 50%;
+        margin: 0 auto 2em auto;
+    }
+}
+
+/* mobile 415px */
+@media(max-width: 415px) {
+
+    .feature li {
+        float: none;
+        width: 85%;
+        margin: 0 auto 2em auto;
+    }
+}
