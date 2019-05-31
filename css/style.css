@@ -149,53 +149,96 @@ a {
 
 /*css reset end*/
 
+/* 
+	統一
+	1. w_padding 70px 30px 
+	2. h3 24px
+	3. h4 18px
+	3. p 16px
+	4. line-height 1.5
+*/
+
 /* layout start */
 .wrap {
-    /* 預設大小 1024px */
+    background: rgba(239, 233, 231, 1);
+}
+
+/* wrap 大小和置中 */
+.w_center {
     max-width: 1024px;
     margin: 0 auto;
+}
+
+.w_padding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media(max-width: 768px) {
+    .w_padding {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media(max-width: 415px) {
+    .w_padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .clear {
     clear: both;
 }
 
+h3,
+h4,
+h5,
+p,
+li {
+    line-height: 1.5;
+}
+
 h3 {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* banner 背景圖 */
 .header {
-    background: url(../img/header_desktop.png);
-    background-repeat: no-repeat;
-    height: 420px;
-    position: relative;
-}
-
-/*更換 mobile 圖 600px 更換因為 mobile 圖片寬度為 600*/
-@media(max-width: 600px) {
-    .header {
-        background: url(../img/header_mobile.png);
-    }
+    background: #000;
 }
 
 /* 表頭選單 + logo */
-.header-main {
+
+/* 表頭選單背景 */
+.header-main_background {
     background: rgba(0, 0, 0, 0.75);
     height: 60px;
-    padding: 0 40px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+
+}
+
+.header-main {
+    padding-top: 0;
+    padding-bottom: 0;
     transition: background 0.3s;
 }
 
-/* header-main 768px 以下，padding 左右改為 10px */
-@media(max-width: 768px) {
+@media(max-width: 415px) {
     .header-main {
-        padding: 0 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -256,7 +299,6 @@ h4 {
 
     /* moblie 選單*/
     .header-main-menu {
-        z-index: 10;
         float: none;
         background: rgba(0, 0, 0, 1);
         /* 預設隱藏 */
@@ -296,13 +338,27 @@ h4 {
     }
 }
 
+/* banner */
+.header-banner {
+    background: url(../img/header_desktop.png);
+    background-repeat: no-repeat;
+    height: 420px;
+    position: relative;
+}
+
+/*更換 mobile 圖 600px 更換因為 mobile 圖片寬度為 600*/
+@media(max-width: 600px) {
+    .header-banner {
+        background: url(../img/header_mobile.png);
+    }
+}
+
 /*標語*/
 .slogan {
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
     padding: 20px;
     text-align: center;
-    line-height: 1.5;
     /* 用絕對定位置中，相對於 header */
     position: absolute;
     top: 50%;
@@ -333,15 +389,8 @@ h4 {
 /*footer*/
 
 .footer {
-    background: rgba(239, 233, 231, 1);
-    padding: 50px 40px;
-}
-
-/* footer 767px 以下，左右 padding 改為 0 */
-@media(max-width: 767px) {
-    .footer {
-        padding: 50px 0;
-    }
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* 介紹 + 聯絡 */
@@ -355,11 +404,6 @@ h4 {
 .footer-intro h3,
 .footer-contact h3 {
     margin-bottom: 1em
-}
-
-.footer-intro p,
-.footer-contact ul {
-    line-height: 1.5;
 }
 
 .footer-contact ul {
@@ -441,26 +485,7 @@ h4 {
 
 /*layout end*/
 
-/* 
-	統一
-	1. padding 左右都是 40px 
-	2. h3 24px
-	3. h4 20px
-	3. p 16px
-*/
-
 /* feature */
-.feature {
-    padding: 80px 40px;
-    line-height: 1.5;
-}
-
-/* 415px 以下 feature padding 左右改 0 */
-@media(max-width: 415px) {
-    .feature {
-        padding: 80px 0;
-    }
-}
 
 .feature-title {
     text-align: center;
@@ -546,11 +571,13 @@ h4 {
 /* todayChef */
 .todayChef {
     background: #3d1101;
-    padding: 0 40px;
-    height: 460px;
+
 }
 
-
+.todayChef-wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
 .todayChef-photo {
     background: url(../img/main_chef_brown.png);
@@ -560,9 +587,18 @@ h4 {
     height: 460px;
 }
 
+/* 768px 切換小張的照片 */
 @media(max-width: 768px) {
     .todayChef-photo {
         background: url(../img/main_chef_brown_small.png);
+    }
+}
+
+/* 415px */
+@media(max-width: 415px) {
+    .todayChef-photo {
+    	background: url(../img/main_chef_brown.png);
+        width: 100%;
     }
 }
 
@@ -572,7 +608,6 @@ h4 {
     padding: 5%;
     height: 460px;
     float: right;
-    line-height: 1.5;
     /* 垂直置中 */
     display: flex;
     justify-content: center;
@@ -581,4 +616,58 @@ h4 {
 
 .todayChef-intro p {
     margin-top: 1em;
+}
+
+/* 415px */
+@media(max-width: 415px) {
+    .todayChef-intro {
+        padding: 3em 0;
+        margin: 0 auto;
+        height: auto;
+        float: none;
+        width: 85%
+    }
+}
+
+/* comments */
+
+
+.comments h3 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.comments ul li {
+    float: left;
+    width: 33.33333%;
+    min-height: 200px;
+    position: relative;
+}
+
+.comments ul li img {
+    float: left;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comments-message {
+    float: left;
+    width: 70%;
+}
+
+.comments-message h4 {
+    height: 67px;
+    line-height: 67px;
+}
+
+.comments-message p {
+    padding-bottom: 2em;
+
+}
+
+.comments-message h5 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #977f76;
 }
