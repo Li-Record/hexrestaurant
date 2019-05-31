@@ -891,7 +891,7 @@ h4 {
 
 /* banner */
 .banner_background {
-    background: #000;
+    background: #100100;
 }
 
 .banner {
@@ -1039,6 +1039,8 @@ h4 {
 
 /*layout end*/
 
+
+/* 首頁 start */
 /* feature */
 
 .feature-title {
@@ -1245,17 +1247,17 @@ h4 {
 }
 
 /* 訂位表單 */
-.orderForm_background {
+.bookingForm_background {
     background: #f6f4f3;
 }
 
-.orderForm h3 {
+.bookingForm h3 {
     text-align: center;
     margin-bottom: 2em;
 }
 
 /* 地圖 */
-.orderForm-map {
+.bookingForm-map {
     background: url(../img/Map.png);
     background-repeat: no-repeat;
     height: 388px;
@@ -1265,7 +1267,7 @@ h4 {
 
 /* 415px 以下 */
 @media(max-width: 415px) {
-    .orderForm-map {
+    .bookingForm-map {
         float: none;
         width: 90%;
         margin: 0 auto;
@@ -1273,7 +1275,7 @@ h4 {
 }
 
 /* 表單部分 */
-.orderForm form {
+.bookingForm form {
     width: 49%;
     height: 388px;
     float: right;
@@ -1281,7 +1283,7 @@ h4 {
 }
 
 @media(max-width: 415px) {
-    .orderForm form {
+    .bookingForm form {
         width: 90%;
         float: none;
 		margin: 30px auto 0 auto;
@@ -1289,17 +1291,17 @@ h4 {
 }
 
 
-.orderForm input[type="text"],
-.orderForm form label {
+.bookingForm input[type="text"],
+.bookingForm form label {
     width: 100%;
     margin: 0.7em 0;
 }
 
-.orderForm form input[type="radio"] {
+.bookingForm form input[type="radio"] {
     margin: 0.9em 3px 0 5px;
 }
 
-.orderForm .btn_position {
+.bookingForm .btn_position {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1321,3 +1323,14 @@ h4 {
     padding: 0.5em 1.5em;
     border-radius: 5px;
 }
+
+/* 首頁 end */
+
+/* 訂購頁 start */
+
+
+
+
+
+
+/* 訂購頁 end */
