@@ -149,16 +149,9 @@ a {
 
 /*css reset end*/
 
-/* 
-	統一
-	1. w_padding 70px 30px 
-	2. h3 24px
-	3. h4 18px
-	3. p 16px
-	4. line-height 1.5
-*/
-
 /* layout start */
+
+/* 統一屬性管理 start */
 .wrap {
     background: rgba(239, 233, 231, 1);
 }
@@ -178,8 +171,8 @@ a {
 
 @media(max-width: 768px) {
     .w_padding {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -210,15 +203,10 @@ h4 {
     font-size: 18px;
 }
 
-/* banner 背景圖 */
-.header {
-    background: #000;
-}
+/* 統一屬性管理 end */
 
-/* 表頭選單 + logo */
-
-/* 表頭選單背景 */
-.header-main_background {
+/* 表頭選單 */
+.header_background {
     background: rgba(0, 0, 0, 0.75);
     height: 60px;
     position: fixed;
@@ -229,32 +217,32 @@ h4 {
 
 }
 
-.header-main {
+.header {
     padding-top: 0;
     padding-bottom: 0;
     transition: background 0.3s;
 }
 
 @media(max-width: 415px) {
-    .header-main {
+    .header {
         padding-left: 10px;
         padding-right: 10px;
     }
 }
 
 /* logo */
-.header-main-logo {
+.header-logo {
     background: url(../img/logo_w@svg.svg);
     background-repeat: no-repeat;
     width: 120px;
     height: 24px;
-    /* 圖片置中，相對於 header-main */
+    /* 圖片置中，相對於 header */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.header-main-logo a {
+.header-logo a {
     /* 隱藏 h1 文字 */
     overflow: hidden;
     white-space: nowrap;
@@ -263,15 +251,15 @@ h4 {
 }
 
 /* pc 選單 */
-.header-main-menu {
+.header-menu {
     float: right;
 }
 
-.header-main-menu li {
+.header-menu li {
     float: left;
 }
 
-.header-main-menu li a {
+.header-menu li a {
     color: #fff;
     display: block;
     padding: 0 25px;
@@ -280,12 +268,12 @@ h4 {
     font-size: 17px;
 }
 
-.header-main-menu li a:hover {
+.header-menu li a:hover {
     background: gray;
 }
 
 /* 隱藏 moblie 選單按鈕 */
-.header-main-humMenu {
+.header-humMenu {
     display: none;
 }
 
@@ -293,12 +281,12 @@ h4 {
 @media(max-width: 768px) {
 
     /* 配合漢堡選單變黑色 */
-    .clickMenu .header-main {
+    .clickMenu .header {
         background: rgba(0, 0, 0, 1);
     }
 
     /* moblie 選單*/
-    .header-main-menu {
+    .header-menu {
         float: none;
         background: rgba(0, 0, 0, 1);
         /* 預設隱藏 */
@@ -312,15 +300,15 @@ h4 {
     }
 
     /* 新增 clickMenu 作為點擊事件 */
-    .clickMenu .header-main-menu {
+    .clickMenu .header-menu {
         max-height: 300px;
     }
 
-    .header-main-menu li {
+    .header-menu li {
         float: none;
     }
 
-    .header-main-menu li a {
+    .headermenu li a {
         color: #fff;
         display: block;
         font-size: 17px;
@@ -328,7 +316,7 @@ h4 {
     }
 
     /* 漢堡選單按鈕，之後改成三條線的 */
-    .header-main-humMenu {
+    .header-humMenu {
         display: block;
         color: #fff;
         padding: 0 15px;
@@ -339,7 +327,11 @@ h4 {
 }
 
 /* banner */
-.header-banner {
+.banner_background {
+    background: #000;
+}
+
+.banner {
     background: url(../img/header_desktop.png);
     background-repeat: no-repeat;
     height: 420px;
@@ -354,7 +346,7 @@ h4 {
 }
 
 /*標語*/
-.slogan {
+.banner-slogan {
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
     padding: 20px;
@@ -366,7 +358,7 @@ h4 {
     transform: translate(-50%, -50%);
 }
 
-.slogan h2 {
+.banner-slogan h2 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 0.5em;
@@ -374,20 +366,19 @@ h4 {
 
 /* 設定在 767px 以下時，slogan 寬度為 60% */
 @media(max-width: 767px) {
-    .slogan {
+    .banner-slogan {
         width: 60%;
     }
 }
 
 /* 設定在 415px 以下時，slogan 寬度為 85% */
 @media(max-width: 415px) {
-    .slogan {
+    .banner-slogan {
         width: 85%;
     }
 }
 
 /*footer*/
-
 .footer {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -597,7 +588,7 @@ h4 {
 /* 415px */
 @media(max-width: 415px) {
     .todayChef-photo {
-    	background: url(../img/main_chef_brown.png);
+        background: url(../img/main_chef_brown.png);
         width: 100%;
     }
 }
@@ -630,8 +621,6 @@ h4 {
 }
 
 /* comments */
-
-
 .comments h3 {
     text-align: center;
     margin-bottom: 1em;
@@ -641,8 +630,16 @@ h4 {
     float: left;
     width: 33.33333%;
     min-height: 200px;
-    position: relative;
 }
+
+@media(max-width: 767px) {
+    .comments ul li {
+        float: none;
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
 
 .comments ul li img {
     float: left;
@@ -652,7 +649,20 @@ h4 {
 
 .comments-message {
     float: left;
-    width: 70%;
+    width: 65%;
+    position: relative;
+}
+
+@media(max-width: 767px) {
+    .comments-message {
+        width: 75%;
+    }
+}
+
+@media(max-width: 415px) {
+    .comments-message {
+        width: 71%;
+    }
 }
 
 .comments-message h4 {
@@ -662,7 +672,6 @@ h4 {
 
 .comments-message p {
     padding-bottom: 2em;
-
 }
 
 .comments-message h5 {
