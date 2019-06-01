@@ -145,6 +145,7 @@ img {
 
 a {
     text-decoration: none;
+    color: #3D1101;
 }
 
 /*css reset end*/
@@ -942,10 +943,6 @@ h4 {
 }
 
 /*footer*/
-.footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
 
 /* 介紹 + 聯絡 */
 .footer-intro,
@@ -1328,9 +1325,146 @@ h4 {
 
 /* 訂購頁 start */
 
+/* 訂購選單 */
+
+.orderMain {
+	padding-bottom: 0;
+}
+
+.orderMain-menu{
+	float: left;
+	width: 20%;
+}
+
+.orderMain-menu h4{
+	padding: 5px;
+	margin-bottom: 0.5em;
+}
+
+.orderMain-menu ul li {
+	border-bottom: 1px solid #3D1101;
+}
+
+.orderMain-menu ul li a {
+	display: block;
+	padding: 5px;
+}
+.orderMain-menu ul li a:hover{
+	background: #3d1101;
+	color: #fff;
+}
+
+/* mobile 選單做成 off canvas */
+
+/* 產品 */
 
 
+.orderMain-product {
+	float: left;
+	width: 77%;
+	margin-left: 3%;
+}
 
+/* search */
+.orderMain-product-search {
+	width: 62.66666%;
+	float: left;
+	position: relative;
+}
 
+.orderMain-product-search input[type="text"] {
+	width: 100%;
+	border-radius: 0 !important;
+	border: 2px solid #3D1101 !important; 
+	background: rgba(239, 233, 231, 1);
+}
+
+.orderMain-product-searchIcon{
+	background: #3D1101;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 33px;
+	padding: 0;
+	border-radius: 0;
+}
+
+/* 購物車 */
+
+.orderMain-product-shoppingCart {
+	float: right;
+	margin-right: 1.5em;
+}
+
+.orderMain-product-shoppingCart li{
+	float: left;
+	line-height: 33.33px;
+}
+
+.orderMain-product-shoppingCart-buy a::after{
+	content: "";
+	border: 0.3px solid;
+	display: inline-block;
+	height: 0.8em;
+	margin: 0 1em;
+}
+
+/* 產品項目 */
+
+.orderMain-product-item li{
+	width: 31.33333%;
+	margin-right: 2%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	box-shadow: 2px 2px 5px gray;
+	float: left;
+}
+
+/* prosuct-item 資訊 */
+
+.orderMain-product-item li img{
+	height: 120px;
+}
+
+.orderMain-product-item-infor {
+	width: 100%;
+	display: block;
+	padding: 1em;
+	text-align: center;
+}
+
+.orderMain-product-item-infor h5 {
+	font-size: 14px;
+}
+
+.orderMain-product-item-infor h5::after {
+	content: "";
+	border-bottom: 1.5px solid;
+	border-radius: 5px;
+	width: 50%;
+	margin: 1em auto 2em auto;
+	display: block;
+}
+
+.orderMain-product-item-infor>i {
+	font-size: 20px;
+	font-style: italic;
+}
+
+.orderMain-product-item-infor a {
+	border: 2px solid #ff5e45;
+	display: block;
+	text-align: center;
+	border-radius: 3px;
+	margin-top: 1em;
+	color:  #ff5e45;
+	transition: all 0.3s;
+}
+
+.orderMain-product-item-infor a:hover {
+	background: #ff5e45;
+	color: #fff;
+}
 
 /* 訂購頁 end */
