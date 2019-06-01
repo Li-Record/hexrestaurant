@@ -1334,6 +1334,7 @@ h4 {
 .orderMain-menu{
 	float: left;
 	width: 20%;
+	margin-right: 1%;
 }
 
 .orderMain-menu h4{
@@ -1361,13 +1362,13 @@ h4 {
 
 .orderMain-product {
 	float: left;
-	width: 77%;
-	margin-left: 3%;
+	width: 79%;
 }
 
 /* search */
 .orderMain-product-search {
-	width: 62.66666%;
+	width: 64.66666%;
+	margin-left: 1%;
 	float: left;
 	position: relative;
 }
@@ -1404,7 +1405,7 @@ h4 {
 
 .orderMain-product-shoppingCart-buy a::after{
 	content: "";
-	border: 0.3px solid;
+	border: 0.5px solid;
 	display: inline-block;
 	height: 0.8em;
 	margin: 0 1em;
@@ -1414,28 +1415,22 @@ h4 {
 
 .orderMain-product-item li{
 	width: 31.33333%;
-	margin-right: 2%;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin: 1em 1%;
 	box-shadow: 2px 2px 5px gray;
 	float: left;
 }
 
 /* prosuct-item 資訊 */
 
-.orderMain-product-item li img{
-	height: 120px;
-}
-
 .orderMain-product-item-infor {
 	width: 100%;
 	display: block;
-	padding: 1em;
+	padding: 0.5em 1em;
 	text-align: center;
 }
 
 .orderMain-product-item-infor h5 {
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .orderMain-product-item-infor h5::after {
@@ -1443,12 +1438,11 @@ h4 {
 	border-bottom: 1.5px solid;
 	border-radius: 5px;
 	width: 50%;
-	margin: 1em auto 2em auto;
+	margin: 0.5em auto 1em auto;
 	display: block;
 }
 
 .orderMain-product-item-infor>i {
-	font-size: 20px;
 	font-style: italic;
 }
 
