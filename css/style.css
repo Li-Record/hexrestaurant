@@ -1461,6 +1461,10 @@ h4 {
     margin: 0 1em;
 }
 
+.orderMain-product-shoppingCart {
+	position: relative;
+}
+
 @media(max-width: 840px) {
     .orderMain-product-shoppingCart {
         margin-right: 1em;
@@ -1473,11 +1477,11 @@ h4 {
     }
 }
 
-/* 購物車產品數量 */
-
-.orderMain-product-shoppingCart {
-	position: relative;
+.orderMain-product-shoppingCart a i{
+	font-size: 1.5em;
 }
+
+/* 購物車產品數量 */
 
 .shopping-cart-productNum {
 	background: #ff5e45;
@@ -1489,7 +1493,7 @@ h4 {
 	line-height: 14px;
 	color: #fff;
 	position: absolute;
-	top: 0;
+	top: -2px;
 	right: -7px;
 }
 
@@ -1569,3 +1573,54 @@ h4 {
 }
 
 /* 訂購頁 end */
+
+/* sign in start */
+
+.loginMain-logo {
+    background: url(../img/logo_l@svg.svg);
+    width: 243px;
+    height: 48px;
+    margin: 0 auto;	
+}
+
+.loginMain h4 {
+	text-align: center;
+}
+
+/* 登入表單 */
+
+.login {
+	width: 300px;
+	padding: 1em;
+	margin: 2em auto 0 auto;
+	border-top: 3px solid #ff5e45;
+	border-radius: 3px;
+	box-shadow: 3px 3px 5px gray;
+}
+
+.login label,
+.login-btn {
+	margin-top: 1.5em;
+}
+
+.login label i {
+	float: left;
+}
+
+.login input[type="text"] {
+	width: 100%;
+
+}
+
+.login-btn a,
+.login-btn button {
+	width: 48%;
+}
+.login-btn button {
+	float: right;
+}
+.forgetPassword{
+	color: #ff5e45;
+	font-size: 14px;
+}
+/* sign in end */
