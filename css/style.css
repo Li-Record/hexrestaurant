@@ -1473,6 +1473,26 @@ h4 {
     }
 }
 
+/* 購物車產品數量 */
+
+.orderMain-product-shoppingCart {
+	position: relative;
+}
+
+.shopping-cart-productNum {
+	background: #ff5e45;
+	font-size: 12px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 14px;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: -7px;
+}
+
 /* 產品項目 */
 
 .orderMain-product-item li {
