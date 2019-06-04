@@ -498,7 +498,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 @media only screen and (max-width : 480px) {
     .pure-form button[type="submit"] {
-        margin: 0.7em 0 0;
+        /*margin: 0.7em 0 0;*/
     }
 
     .pure-form input:not([type]),
@@ -892,7 +892,7 @@ h4 {
 
 /* banner */
 .banner_background {
-    background: #100100;
+    background: #000;
 }
 
 .banner {
@@ -926,6 +926,12 @@ h4 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 0.5em;
+}
+
+.slogan-icon {
+    padding-left: 5px;
+    padding-right: 5px;
+
 }
 
 /* 設定在 767px 以下時，slogan 寬度為 60% */
@@ -1462,7 +1468,7 @@ h4 {
 }
 
 .orderMain-product-shoppingCart {
-	position: relative;
+    position: relative;
 }
 
 @media(max-width: 840px) {
@@ -1477,24 +1483,24 @@ h4 {
     }
 }
 
-.orderMain-product-shoppingCart a i{
-	font-size: 1.5em;
+.orderMain-product-shoppingCart a i {
+    font-size: 1.5em;
 }
 
 /* 購物車產品數量 */
 
 .shopping-cart-productNum {
-	background: #ff5e45;
-	font-size: 12px;
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 14px;
-	color: #fff;
-	position: absolute;
-	top: -2px;
-	right: -7px;
+    background: #ff5e45;
+    font-size: 12px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 14px;
+    color: #fff;
+    position: absolute;
+    top: -2px;
+    right: -7px;
 }
 
 /* 產品項目 */
@@ -1572,55 +1578,180 @@ h4 {
     color: #fff;
 }
 
+/* 熱銷標籤 start */
+
+.hotTag-wrap {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+}
+
+.orderMain-product-hotTag {
+    background: #00cc99;
+    color: #fff;
+    font-size: 12px;
+    width: 100px;
+    padding: 1px 5px;
+    text-align: center;
+    position: absolute;
+    top: 17px;
+    right: -23px;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orderMain-product-hotTag::before,
+.orderMain-product-hotTag::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 16px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transform: rotate(-45deg);
+}
+
+.orderMain-product-hotTag::before {
+    content: "";
+    left: -2px;
+    border-bottom: 4px solid #0f765b;
+}
+
+.orderMain-product-hotTag::after {
+    content: "";
+    right: -2px;
+    border-left: 4px solid #0f765b;
+}
+
+/* 熱銷標籤 end */
+
 /* 訂購頁 end */
 
-/* sign in start */
+/* login start */
 
 .loginMain-logo {
     background: url(../img/logo_l@svg.svg);
     width: 243px;
     height: 48px;
-    margin: 0 auto;	
+    margin: 0 auto;
 }
 
 .loginMain h4 {
-	text-align: center;
+    text-align: center;
+}
+
+/* 註冊 & 登入 共同 */
+.login,
+.register {
+    padding: 1em;
+    margin: 2em auto;
+    border-top: 3px solid #ff5e45;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px gray;
+}
+
+
+.login input[type="text"],
+.register-form input[type="text"] {
+    width: 100%;
+}
+
+.login label,
+.register label {
+    margin-top: 1.5em;
+}
+
+.login-btn,
+.register-form button {
+    margin-top: 3em;
+}
+
+.forgetPassword,
+.haveAccount {
+    color: #ff5e45;
+    font-size: 14px;
 }
 
 /* 登入表單 */
 
 .login {
-	width: 300px;
-	padding: 1em;
-	margin: 2em auto 0 auto;
-	border-top: 3px solid #ff5e45;
-	border-radius: 3px;
-	box-shadow: 3px 3px 5px gray;
+    max-width: 350px;
 }
 
-.login label,
-.login-btn {
-	margin-top: 1.5em;
-}
-
-.login label i {
-	float: left;
-}
-
-.login input[type="text"] {
-	width: 100%;
-
+@media(max-width: 415px) {
+    .login {
+        width: 90%;
+    }
 }
 
 .login-btn a,
 .login-btn button {
-	width: 48%;
+    width: 48%;
 }
+
+.login-btn a {
+    float: left;
+}
+
 .login-btn button {
-	float: right;
+    float: right;
 }
-.forgetPassword{
-	color: #ff5e45;
-	font-size: 14px;
+
+
+/* login end */
+
+/* register start */
+
+.register {
+    max-width: 620px;
 }
-/* sign in end */
+
+@media(max-width: 415px) {
+    .register {
+        width: 90%;
+    }
+}
+
+.register>h4 {
+    margin-bottom: 0.5em;
+}
+
+.register-terms,
+.register-form {
+    width: 49%;
+}
+
+.register-terms {
+    float: left;
+    margin-right: 2%;
+}
+
+@media (max-width: 415px) {
+
+    .register-terms,
+    .register-form {
+        width: 100%;
+    }
+}
+
+.register-terms h4 {
+    text-align: left;
+}
+
+/* 表單 */
+.register-form {
+    float: right;
+}
+
+.register-form button {
+    width: 48%;
+    float: right;
+}
+
+/* register end */
