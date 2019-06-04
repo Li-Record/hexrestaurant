@@ -803,6 +803,8 @@ h4 {
     /* 圖片置中，相對於 header */
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
@@ -879,7 +881,7 @@ h4 {
         text-align: center;
     }
 
-    /* 漢堡選單按鈕 */   
+    /* 漢堡選單按鈕 */
     .header-humMenu {
         display: block;
         float: right;
@@ -888,7 +890,9 @@ h4 {
         position: absolute;
         top: 50%;
         right: 10px;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY();
     }
 
     .header-humMenu span {
@@ -899,13 +903,20 @@ h4 {
         margin: 6px auto;
         transition: all 0.3s;
     }
+
     .clickMenu .humMenu_top {
+        -webkit-transform: translateY(9px) rotate(45deg);
+        -ms-transform: translateY(9px) rotate(45deg);
         transform: translateY(9px) rotate(45deg);
     }
+
     .clickMenu .humMenu_middle {
         opacity: 0;
     }
+
     .clickMenu .humMenu_bottom {
+        -webkit-transform: translateY(-7px) rotate(135deg);
+        -ms-transform: translateY(-7px) rotate(135deg);
         transform: translateY(-7px) rotate(135deg);
     }
 
@@ -940,6 +951,8 @@ h4 {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -1083,6 +1096,8 @@ h4 {
     display: block;
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
@@ -1189,6 +1204,7 @@ h4 {
     height: 460px;
     float: right;
     /* 垂直置中 */
+    display: -webkit-flex;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1400,6 +1416,11 @@ h4 {
         margin: 0 2.5%;
         float: left;
     }
+
+    .orderMain-menu ul li a {
+        padding: 0.6em 5px;
+    }
+
 }
 
 @media(max-width: 500px) {
@@ -1456,6 +1477,11 @@ h4 {
 @media(max-width: 840px) {
     .orderMain-product-search {
         margin-left: 1em;
+    }
+
+    .orderMain-product-search input[type="text"] {
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
     }
 }
 
@@ -1558,6 +1584,13 @@ h4 {
     font-size: 1.3em;
 }
 
+
+@media(max-width: 500px) {
+    .orderMain-product-favoriteIcon {
+        font-size: 1.6em;
+    }
+}
+
 /* prosuct-item 資訊 */
 
 .orderMain-product-item-infor {
@@ -1599,6 +1632,13 @@ h4 {
     color: #fff;
 }
 
+@media(max-width: 500px) {
+    .orderMain-product-item-infor a {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+}
+
 /* 熱銷標籤 start */
 
 .hotTag-wrap {
@@ -1620,6 +1660,8 @@ h4 {
     position: absolute;
     top: 17px;
     right: -23px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -1635,6 +1677,8 @@ h4 {
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     border-bottom: 4px solid transparent;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
