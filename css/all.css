@@ -957,6 +957,13 @@ a {
   .bookingForm form label {
     width: 100%;
     margin: 0.7em 0; }
+  .bookingForm form input[type="text"] {
+    width: 100%;
+    margin-top: 0.5em;
+    font-size: 16px; }
+    @media (max-width: 415px) {
+      .bookingForm form input[type="text"] {
+        padding: 0.7em; } }
   .bookingForm form input[type="radio"] {
     margin: 0.9em 3px 0 5px; }
   .bookingForm form .btn_position {
