@@ -1,7 +1,7 @@
 .login {
     max-width: 350px;
-	
-	@include accountForm;
+
+    @include accountForm;
 
     @include phone () {
         width: $mbWidth;
@@ -15,10 +15,15 @@
 
     input[type="text"] {
         width: $inputWidth;
+        margin-top: $inputTop;
+
+        @include phone {
+            padding: $inputPadding;
+        }
     }
 
     .forgetPassword {
-        color: shoppingCartColor;
+        color: $shoppingCartColor;
         font-size: $font-s;
     }
 

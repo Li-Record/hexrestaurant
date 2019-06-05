@@ -1,6 +1,6 @@
 .register {
     max-width: 620px;
-    
+
     @include accountForm;
 
     @include phone () {
@@ -37,7 +37,12 @@
         }
 
         input[type="text"] {
-            width: $inputWidth
+            width: $inputWidth;
+            margin-top: $inputTop;
+
+            @include phone {
+                padding: $inputPadding;
+            }
         }
 
         button {
