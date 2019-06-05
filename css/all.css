@@ -946,8 +946,7 @@ a {
 .bookingForm form {
   width: 49%;
   height: 388px;
-  float: right;
-  position: relative; }
+  float: right; }
   @media (max-width: 415px) {
     .bookingForm form {
       width: 90%;
@@ -964,11 +963,12 @@ a {
       .bookingForm form input[type="text"] {
         padding: 0.7em; } }
   .bookingForm form input[type="radio"] {
-    margin: 0.9em 3px 0 5px; }
+    margin: 0.9em 3em 0 5px; }
   .bookingForm form .btn_position {
-    position: absolute;
-    bottom: 0;
-    right: 0; }
+    float: right; }
+    @media (max-width: 415px) {
+      .bookingForm form .btn_position {
+        margin-top: 1.3em; } }
     .bookingForm form .btn_position button {
       margin-left: 5px; }
 
