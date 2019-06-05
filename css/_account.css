@@ -1,0 +1,33 @@
+.accountMain-logo {
+  background: url(../img/logo_l@svg.svg);
+  width: 243px;
+  height: 48px;
+  margin: 0 auto; }
+  .accountMain-logo h4 {
+    text-align: center; }
+
+.login,
+.register {
+  padding: 1em;
+  margin: 2em auto;
+  border-top: 3px solid shoppingCartColor;
+  border-radius: 3px;
+  -webkit-box-shadow: 3px 3px 5px gray;
+  box-shadow: 3px 3px 5px gray; }
+
+.login input[type="text"],
+.register-form input[type="text"] {
+  width: 100%; }
+
+.login label,
+.register label {
+  margin-top: 1.5em; }
+
+.login-btn,
+.register-form button {
+  margin-top: 3em; }
+
+.forgetPassword,
+.haveAccount {
+  color: shoppingCartColor;
+  font-size: 14px; }

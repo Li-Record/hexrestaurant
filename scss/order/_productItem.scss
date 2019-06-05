@@ -1,0 +1,78 @@
+.orderMain-product-item {
+    li {
+        width: 31.33333%;
+        margin: 1em 1%;
+        box-shadow: 3px 3px 5px gray;
+        float: left;
+        position: relative;
+
+        @include pad () {
+            width: 45%;
+            margin: 1em 2.5%;
+        }
+
+        @include phone () {
+            width: 100%;
+            margin: 1em 0;
+        }
+    }
+
+    .orderMain-product-favoriteIcon {
+        color: #fff;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-size: $font-h4;
+
+        @include phone () {
+            font-size: $font-h3;
+        }
+    }
+
+    // 產品資訊
+    .orderMain-product-item-infor {
+        width: 100%;
+        display: block;
+        padding: 0.5em 1em;
+        text-align: center;
+
+        h5 {
+            font-size: $font-s;
+        }
+
+        h5::after {
+            content: "";
+            border-bottom: 1.5px solid;
+            border-radius: 5px;
+            width: 50%;
+            margin: 0.5em auto 1em auto;
+            display: block;
+        }
+
+        p {
+            font-style: italic;
+        }
+
+        a {
+            border: 2px solid $shoppingCartColor;
+            display: block;
+            text-align: center;
+            border-radius: 3px;
+            margin-top: 1em;
+            color: $shoppingCartColor;
+            transition: all 0.3s;
+
+            @include phone () {
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+        }
+
+        a:hover {
+            background: $shoppingCartColor;
+            color: #fff;
+        }
+
+    }
+
+}

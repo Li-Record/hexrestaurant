@@ -1,0 +1,55 @@
+.register {
+    max-width: 620px;
+    
+    @include accountForm;
+
+    @include phone () {
+        width: $mbWidth;
+    }
+
+    >h4 {
+        margin-bottom: 0.5em;
+    }
+
+    .register-terms,
+    .register-form {
+        width: 49%;
+
+        @include phone () {
+            width: 100%;
+        }
+    }
+
+    .register-terms {
+        float: left;
+        margin-right: 2%;
+
+        h4 {
+            text-align: left;
+        }
+    }
+
+    .register-form {
+        float: right;
+
+        label {
+            margin-top: $labelTop;
+        }
+
+        input[type="text"] {
+            width: $inputWidth
+        }
+
+        button {
+            width: 48%;
+            float: right;
+            margin-top: $btnTop;
+        }
+
+        .haveAccount {
+            color: $shoppingCartColor;
+            font-size: $font-s;
+        }
+
+    }
+}

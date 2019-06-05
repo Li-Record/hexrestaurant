@@ -1,0 +1,51 @@
+.todayChef-wrap {
+    background: #3d1101;
+
+    .todayChef {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .todayChef-photo {
+            background: url(../img/main_chef_brown.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 50%;
+            height: 460px;
+
+            // 768px 以下
+            @include pad() {
+                background: url(../img/main_chef_brown_small.png);
+            }
+
+            // 415px 以下
+            @include phone() {
+                background: url(../img/main_chef_brown.png);
+                width: 100%;
+            }
+        }
+
+        .todayChef-intro {
+            color: #fff;
+            width: 50%;
+            padding: 5%;
+            height: 460px;
+            float: right;
+            // 垂直置中
+            @include flexVertical;
+
+            p {
+                margin-top: 1em;
+            }
+            
+            // 415px 以下
+            @include phone () {
+                padding: 3em 0;
+                height: auto;
+                @include mobileMerge ($mbWidth, 0, 0);
+            }
+        }
+
+
+    }
+
+}

@@ -1,0 +1,73 @@
+// footer
+
+// 介紹 + 聯絡 
+.footer-intro,
+.footer-contact {
+    float: left;
+    width: 30%;
+    margin-right: 10px;
+
+    h3 {
+        margin-bottom: 1em;
+    }
+
+    // 767px 以下
+    @include pad_below {
+        float: none;
+        width: 50%;
+        margin: 0 auto 2em auto;
+    }
+
+    // 415px 以下
+    @include phone {
+        width: 90%;
+    }
+}
+
+.footer-contact {
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+}
+
+// logo + link
+.footer-item {
+    float: right;
+    width: 30%;
+
+    .footer-item-logo {
+        background: url(../img/logo_l@svg.svg);
+        width: 243px;
+        height: 48px;
+        margin-bottom: 2em;
+        float: right;
+    }
+
+    .footer-item-link {
+        float: right;
+        width: 100%;
+
+        li {
+            float: right;
+            margin-left: 10px;
+
+            a {
+                img {
+                    width: 38px;
+                }
+            }
+        }
+    }
+    // 767px 以下
+    @include pad_below {
+        float: none;
+        width: 50%;
+        margin: 0 auto;
+    }
+    // 415px 以下
+    @include phone {
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,45 @@
+.comments h3 {
+  text-align: center;
+  margin-bottom: 1em; }
+
+.comments ul li {
+  float: left;
+  width: 33.33333%;
+  min-height: 200px; }
+
+@media (max-width: 767px) {
+  .comments ul li {
+    float: none;
+    width: 90%;
+    margin: 0 auto; } }
+
+.comments ul li img {
+  float: left;
+  border-radius: 50%;
+  margin-right: 10px; }
+
+.comments-message {
+  float: left;
+  width: 65%;
+  position: relative; }
+
+@media (max-width: 767px) {
+  .comments-message {
+    width: 75%; } }
+
+@media (max-width: 415px) {
+  .comments-message {
+    width: 71%; } }
+
+.comments-message h4 {
+  height: 67px;
+  line-height: 67px; }
+
+.comments-message p {
+  padding-bottom: 2em; }
+
+.comments-message h5 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #977f76; }

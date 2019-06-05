@@ -1,0 +1,43 @@
+.orderMain-product-shoppingCart {
+    float: right;
+    margin-right: 1.5em;
+    
+    li {
+        float: left;
+        line-height: 33.33px;
+
+        a {
+            i {
+                position: relative;
+                font-size: 1.5em;
+                // 購物車產品數量
+                .shopping-cart-productNum {
+                    background: $shoppingCartColor;
+                    font-size: 12px;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 14px;
+                    color: #fff;
+                    position: absolute;
+                    top: -5px;
+                    right: -7px;
+                }
+            }
+        }
+    }
+
+    .orderMain-product-shoppingCart-buy a::after {
+        @include partitionLine(0.5px, 0.8em, 1em, 1em);
+    }
+
+    @include desktop_below () {
+        margin-right: 1em;
+    }
+
+    @include phone () {
+        margin-right: 0;
+    }
+}
+

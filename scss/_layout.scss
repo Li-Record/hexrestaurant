@@ -1,0 +1,66 @@
+// 設定網頁整體顏色和字型
+body {
+    font-family: $fontFamily;
+    color: $mainColor;
+    font-size: $font-m;
+}
+
+.wrap {
+    background: rgba(239, 233, 231, 1);
+}
+
+// wrap 大小和置中 
+.w_center {
+    @include wrapCenter(1024px, 0);
+}
+
+.w_padding {
+    padding: 50px 30px 50px 30px;
+
+    @include pad() {
+        padding: 50px 10px 50px 10px;
+    }
+
+    @include phone() {
+        padding: 50px 0 50px 0;
+    }
+}
+
+.clear {
+    @include clearFix;
+}
+
+// 統一屬性管理
+h3,
+h4,
+h5,
+p,
+li {
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: $font-h3;
+}
+
+h4 {
+    font-size: $font-h4;
+}
+
+a {
+    color: $mainColor;
+}
+
+// 修改 pure button 樣式
+.pure-button {
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+}
+
+.pure-button-primary {
+    background-color: #EE6723;
+}
+
+.pure-button-disabled {
+    background-color: #a09e9e;
+}

@@ -1,0 +1,41 @@
+.orderMain-product-search {
+    width: 64.66666%;
+    margin-left: 1%;
+    float: left;
+    position: relative;
+
+    input[type="text"] {
+        width: 100%;
+        border-radius: 0 !important;
+        border: 2px solid $mainColor !important;
+        background: rgba(239, 233, 231, 1);
+
+        @include desktop_below () {
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+        }
+    }
+
+    // 搜尋按鈕
+    .orderMain-product-searchIcon {
+        background: $mainColor;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 33px;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    @include desktop_below () {
+        margin-left: 1em;
+    }
+
+    @include phone () {
+        float: none;
+        margin-left: 0;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+}

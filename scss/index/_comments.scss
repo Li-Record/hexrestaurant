@@ -1,0 +1,57 @@
+.comments {
+    h3 {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    ul {
+        li {
+            float: left;
+            width: 33.33333%;
+            min-height: 200px;
+
+            // 767px 以下
+            @include pad_below () {
+                @include mobileMerge ($mbWidth, 0, 0);
+            }
+
+            img {
+                float: left;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .comments-message {
+                float: left;
+                width: 65%;
+                position: relative;
+
+                // 767px
+                @include pad_below () {
+                    width: 75%;
+                }
+
+                // 415px
+                @include phone () {
+                    width: 71%;
+                }
+
+                h4 {
+                    height: 67px;
+                    line-height: 67px;
+                }
+
+                p {
+                    padding-bottom: 2em;
+                }
+
+                h5 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    color: #977f76;
+                }
+            }
+        }
+    }
+}

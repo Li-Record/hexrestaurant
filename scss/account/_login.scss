@@ -1,0 +1,42 @@
+.login {
+    max-width: 350px;
+	
+	@include accountForm;
+
+    @include phone () {
+        width: $mbWidth;
+    }
+
+
+
+    label {
+        margin-top: $labelTop;
+    }
+
+    input[type="text"] {
+        width: $inputWidth;
+    }
+
+    .forgetPassword {
+        color: shoppingCartColor;
+        font-size: $font-s;
+    }
+
+    .login-btn {
+        margin-top: $btnTop;
+
+        a,
+        button {
+            width: 48%;
+        }
+
+        a {
+            float: left;
+        }
+
+        button {
+            float: right;
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+// 訂購頁
+.orderMain {
+    padding-bottom: 0;
+}
+
+// 產品
+.orderMain-product {
+    float: left;
+    width: 79%;
+
+    // 959px
+    @include desktop_below () {
+        @include mobileMerge ($mbWidth, 0, 0)
+    }
+}
