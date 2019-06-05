@@ -1025,11 +1025,11 @@ a {
     width: 100%;
     border-radius: 0 !important;
     border: 2px solid #3D1101 !important;
-    background: #efe9e7; }
-    @media (max-width: 959px) {
+    background: #efe9e7;
+    font-size: 16px; }
+    @media (max-width: 415px) {
       .orderMain-product-search input[type="text"] {
-        padding-top: 0.8em;
-        padding-bottom: 0.8em; } }
+        padding: 0.7em; } }
   .orderMain-product-search .orderMain-product-searchIcon {
     background: #3D1101;
     position: absolute;
@@ -1054,7 +1054,7 @@ a {
   margin-right: 1.5em; }
   .orderMain-product-shoppingCart li {
     float: left;
-    line-height: 41.33px; }
+    line-height: 38.4px; }
     .orderMain-product-shoppingCart li a i {
       position: relative;
       font-size: 1.5em; }
@@ -1212,10 +1212,11 @@ a {
     margin-top: 1.5em; }
   .login input[type="text"] {
     width: 100%;
-    margin-top: 0.5em; }
+    margin-top: 0.5em;
+    font-size: 16px; }
     @media (max-width: 415px) {
       .login input[type="text"] {
-        padding: 1em 0.8em; } }
+        padding: 0.7em; } }
   .login .forgetPassword {
     color: #ff5e45;
     font-size: 12.8px; }
@@ -1260,10 +1261,11 @@ a {
       margin-top: 1.5em; }
     .register .register-form input[type="text"] {
       width: 100%;
-      margin-top: 0.5em; }
+      margin-top: 0.5em;
+      font-size: 16px; }
       @media (max-width: 415px) {
         .register .register-form input[type="text"] {
-          padding: 1em 0.8em; } }
+          padding: 0.7em; } }
     .register .register-form button {
       width: 48%;
       float: right;

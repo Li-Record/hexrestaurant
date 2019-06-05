@@ -16,6 +16,7 @@
     input[type="text"] {
         width: $inputWidth;
         margin-top: $inputTop;
+        font-size: $font-m;
 
         @include phone {
             padding: $inputPadding;

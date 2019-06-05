@@ -9,10 +9,10 @@
         border-radius: 0 !important;
         border: 2px solid $mainColor !important;
         background: rgba(239, 233, 231, 1);
+        font-size: $font-m;
 
-        @include desktop_below () {
-            padding-top: 0.8em;
-            padding-bottom: 0.8em;
+        @include phone () {
+            padding: $inputPadding;
         }
     }
 
