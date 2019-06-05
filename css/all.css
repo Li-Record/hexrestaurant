@@ -953,7 +953,6 @@ a {
       width: 90%;
       float: none;
       margin: 30px auto 0 auto; } }
-  .bookingForm form input[type="text"],
   .bookingForm form label {
     width: 100%;
     margin: 0.7em 0; }
